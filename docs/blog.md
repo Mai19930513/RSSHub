@@ -16,6 +16,12 @@ pageClass: routes
 
 </Route>
 
+## Apache
+
+### APISIX 博客
+
+<Route author="aneasystone" example="/apache/apisix/blog" path="/apache/apisix/blog"/>
+
 ## archdaily
 
 ### 首页
@@ -31,6 +37,18 @@ pageClass: routes
 ### 用户博客
 
 <Route author="Jkker" example="/csdn/blog/csdngeeknews" path="/csdn/blog/:user" radar="1" :paramsDesc="['`user` 为 CSDN 用户名，可以在主页 url 中找到']" />
+
+## FreeBuf
+
+### 文章
+
+<Route author="trganda" example="/freebuf/articles/web" path="/freebuf/articles/:type" :paramsDesc="['文章类别', '文章id号，可选']">
+
+::: tip 使用说明
+Freebuf 的文章页面带有反爬虫机制，所以目前无法获取文章的完整内容。
+:::
+
+</Route>
 
 ## Geocaching
 
@@ -84,15 +102,15 @@ username 为博主用户名，而非`xxx.hashnode.dev`中`xxx`所代表的 blog 
 
 ### Next 主题博客
 
-<Route author="fengkx" example="/hexo/next/diygod.me" path="/hexo/next/:url" :paramsDesc="['博客 Url 不带协议头']"/>
+<Route author="fengkx" example="/hexo/next/archive.diygod.me" path="/hexo/next/:url" :paramsDesc="['博客 Url 不带协议头']" selfhost="1"/>
 
 ### Yilia 主题博客
 
-<Route author="aha2mao" example="/hexo/yilia/cloudstone.xin" path="/hexo/yilia/:url" :paramsDesc="['博客 Url 不带协议头']"/>
+<Route author="aha2mao" example="/hexo/yilia/cloudstone.xin" path="/hexo/yilia/:url" :paramsDesc="['博客 Url 不带协议头']" selfhost="1"/>
 
 ### Fluid 主题博客
 
-<Route author="gkkeys" example="/hexo/fluid/blog.tonyzhao.xyz" path="/hexo/fluid/:url" :paramsDesc="['博客 Url 不带协议头']"/>
+<Route author="gkkeys" example="/hexo/fluid/blog.tonyzhao.xyz" path="/hexo/fluid/:url" :paramsDesc="['博客 Url 不带协议头']" selfhost="1"/>
 
 ## Hi, DIYgod
 
@@ -110,6 +128,12 @@ username 为博主用户名，而非`xxx.hashnode.dev`中`xxx`所代表的 blog 
 
 <Route author="nczitzk" example="/justrun" path="/justrun"/>
 
+## Kun Cheng
+
+### Essay
+
+<Route author="nczitzk" example="/kunchengblog/essay" path="/kunchengblog/essay" radar="1"/>
+
 ## LaTeX 开源小屋
 
 ### 首页
@@ -121,6 +145,12 @@ username 为博主用户名，而非`xxx.hashnode.dev`中`xxx`所代表的 blog 
 ### blog
 
 <Route author="xyqfer" example="/leemeng" path="/leemeng"/>
+
+## MacMenuBar
+
+### Recently
+
+<RouteEn author="5upernova-heng" example="/macmenubar/recently/developer-apps,system-tools" path="/macmenubar/recently/:category?" :paramsDesc="['分类名，多个使用逗号隔开，留空则为全部。分类名可在 URL 中找到']" radar="1" />
 
 ## Miris Whispers
 
@@ -404,6 +434,18 @@ username 为博主用户名，而非`xxx.hashnode.dev`中`xxx`所代表的 blog 
 ### 分类
 
 <Route author="XinRoom" example="/ddosi/category/黑客工具" path="/ddosi/category/:category?"/>
+
+## 云原生社区
+
+### 博客
+
+<Route author="aneasystone" example="/cloudnative/blog" path="/cloudnative/blog"/>
+
+## 支流科技
+
+### 博客
+
+<Route author="aneasystone" example="/apiseven/blog" path="/apiseven/blog"/>
 
 ## 竹白
 
